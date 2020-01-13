@@ -2,7 +2,7 @@ import java.util.ArrayList;
 /**
  * Represents the schedule of a student.
  * 
- * @author (PUT YOUR NAME HERE) 
+ * @author (Declinda) 
  * @version (01/25/2019)
  */
 public class Schedule
@@ -40,7 +40,12 @@ public class Schedule
         
         // ALL OF YOUR CODE SHOULD BE CONTAINED WITHIN THIS CONSTRUCTOR
         // ---BEGINNING OF YOUR CODE---
-
+        int numCourses = s.getCoursesTaken().size();
+        for( int i=0; i < numCourses; i++)
+        {
+             String block = s.getCoursesTaken.get(i).getBlock;
+        }
+        
 
         // ---END OF YOUR CODE ---
     }

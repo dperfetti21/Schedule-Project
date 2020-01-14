@@ -43,10 +43,14 @@ public class Schedule
         int numCourses = s.getCoursesTaken().size();
         for( int i=0; i < numCourses; i++)
         {
-             String block = s.getCoursesTaken.get(i).getBlock;
+            ArrayList<String> courses = new ArrayList<String>();
+            for(String curCourse : coursesTaken)
+            {
+                
+            }
+            int block = courses(i).getBlock;
         }
         
-
         // ---END OF YOUR CODE ---
     }
 

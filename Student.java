@@ -43,7 +43,6 @@ public class Student implements Comparable<Student>
     public ArrayList<Course> getCoursesTaken()
     {   return coursesTaken;    }
 
-
     /**
      * Precondition: this student has taken at least one course.
      * Postcondition: returns true if this student's total number of 

@@ -40,15 +40,13 @@ public class Schedule
         
         // ALL OF YOUR CODE SHOULD BE CONTAINED WITHIN THIS CONSTRUCTOR
         // ---BEGINNING OF YOUR CODE---
-        int numCourses = s.getCoursesTaken().size();
-        for( int i=0; i < numCourses; i++)
+        
+        String[][] sched = new String [7][5];
+        for(int i=0; i < s.getCoursesTaken().size(); i++)
         {
-            ArrayList<String> courses = new ArrayList<String>();
-            for(String curCourse : coursesTaken)
-            {
-                
-            }
-            int block = courses(i).getBlock;
+         Course curCourse = s.getCoursesTaken().get(i); 
+         String curBlock = curCourse.getBlock();  
+            
         }
         
         // ---END OF YOUR CODE ---

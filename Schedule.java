@@ -8,10 +8,10 @@ import java.util.ArrayList;
 public class Schedule
 {
     private String[][] sched;   // represents a week's schedule. rows represent periods (0-6)
-                                // and columns represent days of the week (0=Monday,1=Tuesday,...,4=Friday)
+    // and columns represent days of the week (0=Monday,1=Tuesday,...,4=Friday)
     private final int NUM_PERIODS = 7;
     private final int NUM_DAYS_IN_WEEK = 5;
-                                
+
     /**
      * Builds the schedule for a given student.
      * @param s the student whose schedule you wish to build
@@ -37,18 +37,24 @@ public class Schedule
         // Example: String s = "4";
         //          int i = Integer.parseInt(s);  // i now contains the int 4
 
-        
         // ALL OF YOUR CODE SHOULD BE CONTAINED WITHIN THIS CONSTRUCTOR
         // ---BEGINNING OF YOUR CODE---
-        
+
         String[][] sched = new String [7][5];
+        String curBlock = "";
         for(int i=0; i < s.getCoursesTaken().size(); i++)
         {
-         Course curCourse = s.getCoursesTaken().get(i); 
-         String curBlock = curCourse.getBlock();  
-            
+            Course curCourse = s.getCoursesTaken().get(i); 
+            curBlock = curCourse.getBlock();  
+
+            for(int j = 0; j < curBlock.length()-1; j++)
+            {
+                String block = curBlock.substring(j, j+1);
+                int b = Integer.parseInt(block);
+                sched[j][b] = curCourse.getName();
+            }
         }
-        
+
         // ---END OF YOUR CODE ---
     }
 

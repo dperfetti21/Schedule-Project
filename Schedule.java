@@ -49,8 +49,12 @@ public class Schedule
             for(int j = 0; j < curBlock.length()-1; j++)
             {
                 String block = curBlock.substring(j, j+1);
-                int b = Integer.parseInt(block);
-                sched[b-1][j] = curCourse.getName();
+                if(block.equals("x"))
+                {
+                  continue;   
+                }
+                int b = Integer.parseInt(block)-1;
+                sched[b][j] = curCourse.getName();
             }
         }
 

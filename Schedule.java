@@ -43,17 +43,16 @@ public class Schedule
         String[][] sched = new String [7][5];
         for(int i=0; i < s.getCoursesTaken().size(); i++)
         {
-            Course curCourse = s.getCoursesTaken().get(i); 
+             Course curCourse = s.getCoursesTaken().get(i); 
             String curBlock = curCourse.getBlock();  
-
+            int b = 0;
             for(int j = 0; j < curBlock.length()-1; j++)
             {
                 String block = curBlock.substring(j, j+1);
-                if(block.equals("x"))
+                if(!block.equals("x"))
                 {
-                  continue;   
+                  b = Integer.parseInt(block)-1;
                 }
-                int b = Integer.parseInt(block)-1;
                 sched[b][j] = curCourse.getName();
             }
         }

@@ -40,19 +40,20 @@ public class Schedule
         // ALL OF YOUR CODE SHOULD BE CONTAINED WITHIN THIS CONSTRUCTOR
         // ---BEGINNING OF YOUR CODE---
 
-        String[][] sched = new String [7][5];
+        sched = new String [7][5];
         for(int i=0; i < s.getCoursesTaken().size(); i++)
         {
              Course curCourse = s.getCoursesTaken().get(i); 
             String curBlock = curCourse.getBlock();  
             int b = 0;
-            for(int j = 0; j < curBlock.length()-1; j++)
+            for(int j = 0; j < curBlock.length(); j++)
             {
                 String block = curBlock.substring(j, j+1);
-                if(!block.equals("x"))
+                if(block.equals("x"))
                 {
-                  b = Integer.parseInt(block)-1;
+                  continue;
                 }
+                b = Integer.parseInt(block)-1;
                 sched[b][j] = curCourse.getName();
             }
         }
